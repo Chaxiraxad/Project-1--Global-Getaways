@@ -1,0 +1,14 @@
+.jumbotron {
+    background-color: rgb(214, 181, 214);
+}
+
+.header {
+    display: block;
+}
+
+body {
+    background-color: antiquewhite;
+}
+.search-button {
+    background-color: navajowhite;
+}
