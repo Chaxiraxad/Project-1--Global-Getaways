@@ -35,22 +35,22 @@ function searchForLocation(location) {
 
         $.ajax(cityDataSettings).done(function (response) {
             console.log(response);
-            //everything for HTML needs to be here
-
-            var hotel = response.result[0];
-            console.log("Hotel_Name:", hotel.hotel_name);
-            console.log("Max_Photo_Url:", hotel.max_photo_url)
-            console.log("url:", hotel.url)
-            console.log("Review_Score:", hotel.review_score)
-
-
-
-
-            //   console.log()
-            //   console.log("Location:", hotel.location);
-            //   console.log("main_photo_url:", hotel.images[0].url);
-            //   $("body").append("<div><h2>" + hotel.name + "</h2><img src='" + hotel.images[0].url + "'><p>" + hotel.address + "</p><p>" + hotel.location + "</p></div>");
-
+    //everything for HTML needs to be here
+    
+       var hotel = response.result[0];
+          console.log("Hotel_Name:", hotel.hotel_name);
+          console.log("Max_Photo_Url:", hotel.max_photo_url)
+          console.log("url:", hotel.url)
+          console.log("Review_Score:", hotel.review_score)
+    
+      
+       
+    
+        //   console.log()
+        //   console.log("Location:", hotel.location);
+        //   console.log("main_photo_url:", hotel.images[0].url);
+        //   $("body").append("<div><h2>" + hotel.name + "</h2><img src='" + hotel.images[0].url + "'><p>" + hotel.address + "</p><p>" + hotel.location + "</p></div>");
+    
         });
 
     });
