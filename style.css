@@ -12,3 +12,9 @@ body {
 .search-button {
     background-color: navajowhite;
 }
+.navbar {
+    width: 900px;
+    border: 15px white; 
+    padding: 50px;
+    margin: 20px; 
+}
