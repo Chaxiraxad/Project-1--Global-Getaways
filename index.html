@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
     <title>Travel Page Name</title>
     <link rel="stylesheet" href="./style.css">
 
 </head>
+
 <body>
     <!-- create Jumbotron for the main section  -->
     <div class="jumbotron">
@@ -25,12 +27,20 @@
           </form>
         </nav>
         <p>additional text</p>
+    <!-- Create navbar -->
       </div>
+      <nav class="navbar navbar-light bg-light">
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="search-button" type="submit">Search</button>
+        </form>
+      </nav>
       <!-- Create carousel to flick through the photos -->
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="..." class="d-block w-100" alt="...">
+            <img class="d-block w-100">
           </div>
           <div class="carousel-item">
             <img src="..." class="d-block w-100" alt="...">
@@ -47,17 +57,28 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </button>
-      </div>
-<!-- Modal to display the place description  -->
-      <div>
-        <p>Modal to place description</p>
-      <div class="modal-dialog modal-xl">...</div>
-      <div class="modal-dialog modal-lg">...</div>
-      <div class="modal-dialog modal-sm">...</div>
+      </div> -->
+    <!-- Modal to display the place description  -->
+    <div>
+        <p class="city-name" Modal to place description></p>
+        <p class="city-rate" Modal to place description></p>
+        <p class="city-budget" Modal to place description></p> 
+        <p class="city-budgettext" Modal to place description></p>
+        <p class="city-tour" Modal to place description></p>
+
+        <div class="modal-dialog modal-xl">...</div>
+        <div class="modal-dialog modal-lg">...</div>
+        <div class="modal-dialog modal-sm">...</div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
-  </body>
+</body>
+
 </html>
