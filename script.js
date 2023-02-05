@@ -50,6 +50,10 @@ function searchForLocation(location){
         //   console.log("main_photo_url:", hotel.images[0].url);
         //   $("body").append("<div><h2>" + hotel.name + "</h2><img src='" + hotel.images[0].url + "'><p>" + hotel.address + "</p><p>" + hotel.location + "</p></div>");
     
+        
+
+
+
         });
     
     });
