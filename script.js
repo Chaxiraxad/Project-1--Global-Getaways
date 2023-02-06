@@ -6,7 +6,7 @@ function searchForLocation(location) {
         "url": `https://booking-com.p.rapidapi.com/v1/hotels/locations?locale=en-gb&name=${location}`,
         "method": "GET",
         "headers": {
-            "X-RapidAPI-Key": "8dcbfe436fmsh89904f43e1016cfp1f95fbjsn4e38770a886a",
+            "X-RapidAPI-Key": "7f8d90c41emsh83bb1582f24d1f5p1217cbjsna7b88f62114b",
             "X-RapidAPI-Host": "booking-com.p.rapidapi.com"
         }
     };
@@ -36,6 +36,12 @@ function searchForLocation(location) {
         $.ajax(cityDataSettings).done(function (response) {
             console.log(response);
             //everything for HTML needs to be here
+            var hotelName = hotel.hotel_name
+            var hotelPhoto = hotel.max_photo_url
+            var hotelUrl = hotel.url
+            var hotelReview = hotel.review_score
+
+
 
             var hotel = response.result[0];
             console.log("Hotel_Name:", hotel.hotel_name);
