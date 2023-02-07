@@ -124,29 +124,35 @@ function searchGoatApi(location) {
 
                     //carusel img
                     const responseArray = citygoatResponse.included
-                    carosuelLogic(responseArray)
+                    // carosuelLogic(responseArray)
+                   var locationImages = responseArray.filter((item) => {
+                    return item.type === "photo"
+                   })
+                    // for (let index = 0; index < responseArray.length; index++) {
+                    //     if (responseArray[index].type === 'photo') {
+                    //         let carouselElement
 
-                    for (let index = 0; index < responseArray.length; index++) {
-                        if (responseArray[index].type === 'photo') {
-                            let carouselElement
+                    //         // index is not gonna be zero most times
+                    //         // figure out how to add the active class on the first item of the array (no matter the index)
+                    //         if (index === 0) {
+                    //             // whatever is in backticks below is called a template literal (template string)
+                    //             carouselElement = $(`<div class="carousel-item active">
+                    //     <img src="${responseArray[index].attributes.image.full}" class="d-block w-100" alt="...">
+                    //   </div>`)
 
-                            // index is not gonna be zero most times
-                            // figure out how to add the active class on the first item of the array (no matter the index)
-                            if (index === 0) {
-                                // whatever is in backticks below is called a template literal (template string)
-                                carouselElement = $(`<div class="carousel-item active">
-                        <img src="${responseArray[index].attributes.image.full}" class="d-block w-100" alt="...">
-                      </div>`)
+                    //         } else {
+                    //             carouselElement = $(`<div class="carousel-item">
+                    //     <img src="${responseArray[index].attributes.image.full}" class="d-block w-100" alt="...">
+                    //   </div>`)
 
-                            } else {
-                                carouselElement = $(`<div class="carousel-item">
-                        <img src="${responseArray[index].attributes.image.full}" class="d-block w-100" alt="...">
-                      </div>`)
+                    //         }
+                    //         innerCarousel.append(carouselElement)
+                    //     }
+                    // }
+                    $(".location-image").each(function(index){
+                        $(this).attr("src" , locationImages[index].attributes.image.full)
+                    })
 
-                            }
-                            innerCarousel.append(carouselElement)
-                        }
-                    }
 
                     // city rating
                     if (goatRating === 0) {
@@ -191,7 +197,15 @@ function searchGoatApi(location) {
 function renderHotelResponse(hotels) {
     let hotelCont = document.querySelector("#hotel-container")
     console.log ("RENDER HOTELS:",hotels)
+  
 
+    $(".hotel-card").each(function(index){
+        console.log("card-images", $(this))
+        $(this).children(".hotel-image").attr("src", hotels[index].max_photo_url)
+
+    })
+    
+    
     for (i = 0; i <= 2; i++) {
         console.log (hotels[i].hotel_name)
         let hotelCardEl = document.createElement("div") 
@@ -234,6 +248,7 @@ $('.form-inline').on('submit', function (event) {
     event.preventDefault();
     // getCity()
     const userInput = $('.form-control').val();
+    $("#clear-button").removeClass("d-none")
 
     searchGoatApi(userInput)
     // searchForLocation(userInput)
