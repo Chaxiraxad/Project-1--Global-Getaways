@@ -30,3 +30,44 @@ body {
 .form-control {
     
 }
+
+#search-container {
+    width: 100%;
+    height: 400px;
+    background-image: url(./gabi-repaska-9OGBjr3fo7E-unsplash.jpg);
+    background-size: cover;
+    background-position: 50% 25%;
+    display: flex;
+    justify-content: center;
+}
+
+#search-bar {
+    width: 60%;
+}
+
+#search-bar form {
+    width: 100%;
+}
+
+#search-bar input {
+    width: 80%;
+}
+
+#search-bar button {
+    width: 20%;
+}
+
+/* #slide-container {
+    display: none;
+} */
+
+#carouselExampleFade {
+    width: 80%;
+    height: 300px;
+}
+
+.carousel-image {
+    /* height: 60vh;  */
+    height: 300px;
+    background-color: red;
+}
