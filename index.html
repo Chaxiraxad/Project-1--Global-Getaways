@@ -33,15 +33,13 @@
 
 
   <!-- <-- list of past searched cities --> 
-  <div class="box table-box">
-    <div class="table-container">
-      <table id="cityList" class="table is-bordered">
-        <tr></tr>
-        <!-- Table data generated in javascript -->
-      </table>
-
-      <button type="button" id="clear-button" class="btn btn-outline-dark d-none">Clear</button>
-    </div>
+  
+  <div class="previous-search-container d-none">
+   
+    <button type="button" id="clear-button" class="btn btn-outline-dark ">Clear</button>
+    
+    <!-- <button type="button"  class="btn btn-info"></button> -->
+  
   </div>
 
   <!-- <div id="carouselExample" class="carousel slide" data-ride="carousel">
@@ -86,7 +84,7 @@
     <p class="city-rate"></p>
     <p class="city-budget"></p>
     <p class="city-budgettext"></p>
-    <a class="city-tour" target='_blank'><button type="button">Click to see guide!</button></a>
+    <a class="city-tour d-none" id="tour-guide" target='_blank'><button type="button">Click to find a tour guide!</button></a>
   </div>
 
   <div id="hotel-container">

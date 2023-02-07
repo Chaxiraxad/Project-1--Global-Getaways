@@ -1,4 +1,8 @@
 const history = JSON.parse(localStorage.getItem('history')) || [];
+history.forEach((item)=>{
+$(".previous-search-container").append(`<button type="button"  class="btn btn-info ">${item}</button>`)
+})
+
 
 const innerCarousel = $('#carousel-inner')
 
@@ -248,8 +252,8 @@ $('.form-inline').on('submit', function (event) {
     event.preventDefault();
     // getCity()
     const userInput = $('.form-control').val();
-    $("#clear-button").removeClass("d-none")
-
+    $(".previous-search-container").removeClass("d-none")
+    $("#tour-guide").removeClass("d-none")
     searchGoatApi(userInput)
     // searchForLocation(userInput)
     if (history.includes(userInput)) {
@@ -257,21 +261,26 @@ $('.form-inline').on('submit', function (event) {
     } else {
         history.push(userInput);
         localStorage.setItem('history', JSON.stringify(history));
+        $(".previous-search-container").append(`<button type="button"  class="btn btn-info ">${userInput}</button>`)
     }
 
 })
 console.log(history);
-// History variable is an array of all the cities
-// You can loop over that variable and attach them to buttons and then append them to the page
-// for (let index = 0; index < history.length; index++) {
-//     const city
-//     city = $("#cityList")
-//     citylist.append($('<td>' + city))
-// }
 
 
 
+//removes city search
+document.getElementById("clear-button").onclick = function() {myFunction()};
+function myFunction() {
+  document.getElementById("clear-button").innerHTML = localStorage.clear(history);
+  $("#clear-button").addClass("d-none")
+  $(".btn-info").addClass("d-none")
+}
 
-
-
-
+// //direct city search when click on previous search button
+// document.getElementById(".btn btn-info").onclick = function() {searchFunction()};
+// function searchFunction() {
+//    var x = (`<button type="button"  class="btn btn-info ">${item}</button>`).val()
+//     x.push(userInput)
+//     searchGoatApi(userInput)
+//   }

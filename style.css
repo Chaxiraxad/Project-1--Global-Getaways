@@ -82,3 +82,12 @@ body {
 .hotel-card{
     width:30%;
 }
+
+.previous-search-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 20px;
+    padding: 20px;
+}
