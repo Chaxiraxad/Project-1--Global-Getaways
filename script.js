@@ -1,4 +1,8 @@
 const history = JSON.parse(localStorage.getItem('history')) || [];
+history.forEach((item)=>{
+$(".previous-search-container").append(`<button type="button"  class="btn btn-info previous-search-button">${item}</button>`)
+})
+
 
 const innerCarousel = $('#carousel-inner')
 
@@ -151,7 +155,11 @@ function searchGoatApi(location) {
                     //     }
                     // }
                     $(".location-image").each(function(index){
-                        $(this).attr("src" , locationImages[index].attributes.image.full)
+                        if (locationImages[index] !== undefined && locationImages[index].attributes !== undefined){
+                            $(this).attr("src" , locationImages[index].attributes.image.full || "")
+                        }
+                       
+
                     })
                     $('#carouselExampleControls').removeClass('d-none')
 
@@ -251,8 +259,8 @@ $('.form-inline').on('submit', function (event) {
     event.preventDefault();
     // getCity()
     const userInput = $('.form-control').val();
-    $("#clear-button").removeClass("d-none")
-
+    $(".previous-search-container").removeClass("d-none")
+    $("#tour-guide").removeClass("d-none")
     searchGoatApi(userInput)
     // searchForLocation(userInput)
     if (history.includes(userInput)) {
@@ -260,21 +268,27 @@ $('.form-inline').on('submit', function (event) {
     } else {
         history.push(userInput);
         localStorage.setItem('history', JSON.stringify(history));
+        $(".previous-search-container").append(`<button type="button"  class="btn btn-info previous-search-button ">${userInput}</button>`)
     }
 
 })
 console.log(history);
-// History variable is an array of all the cities
-// You can loop over that variable and attach them to buttons and then append them to the page
-// for (let index = 0; index < history.length; index++) {
-//     const city
-//     city = $("#cityList")
-//     citylist.append($('<td>' + city))
-// }
 
 
 
+//removes city search
 
+$("#clear-button").on('click', function (event) {
+    console.log(event, "clear event")
+     localStorage.removeItem("history");
+   $(".previous-search-button").remove()
 
+})
 
+$("body").on("click", ".previous-search-button", function(){
+    const userInput = $(this).html()
+    searchGoatApi(userInput)
+  
+    
+    })
 
