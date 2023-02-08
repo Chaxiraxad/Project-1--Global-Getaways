@@ -91,3 +91,13 @@ body {
     gap: 20px;
     padding: 20px;
 }
+.goat-container {
+    display: flex;
+    flex-wrap: wrap;
+    width:99vw;
+    justify-content: space-around;
+    padding: 100px;
+    font-size: x-large;
+    font-weight: bold;
+    
+}

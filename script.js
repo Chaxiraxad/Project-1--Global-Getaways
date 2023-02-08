@@ -1,6 +1,6 @@
 const history = JSON.parse(localStorage.getItem('history')) || [];
 history.forEach((item)=>{
-$(".previous-search-container").append(`<button type="button"  class="btn btn-info ">${item}</button>`)
+$(".previous-search-container").append(`<button type="button"  class="btn btn-info previous-search-button">${item}</button>`)
 })
 
 
@@ -154,7 +154,11 @@ function searchGoatApi(location) {
                     //     }
                     // }
                     $(".location-image").each(function(index){
-                        $(this).attr("src" , locationImages[index].attributes.image.full)
+                        if (locationImages[index] !== undefined && locationImages[index].attributes !== undefined){
+                            $(this).attr("src" , locationImages[index].attributes.image.full || "")
+                        }
+                       
+
                     })
 
 
@@ -261,7 +265,7 @@ $('.form-inline').on('submit', function (event) {
     } else {
         history.push(userInput);
         localStorage.setItem('history', JSON.stringify(history));
-        $(".previous-search-container").append(`<button type="button"  class="btn btn-info ">${userInput}</button>`)
+        $(".previous-search-container").append(`<button type="button"  class="btn btn-info previous-search-button ">${userInput}</button>`)
     }
 
 })
@@ -270,18 +274,18 @@ console.log(history);
 
 
 //removes city search
-document.getElementById("clear-button").onclick = function() {myFunction()};
-function myFunction() {
-    event.preventDefault();
-  document.getElementById("clear-button").innerHTML = localStorage.clear(history);
-  $("#clear-button").addClass("d-none")
-  $(".btn-info").addClass("d-none")
-}
 
-// //direct city search when click on previous search button
-// document.getElementById(".btn btn-info").onclick = function() {searchFunction()};
-// function searchFunction() {
-//    var x = (`<button type="button"  class="btn btn-info ">${item}</button>`).val()
-//     x.push(userInput)
-//     searchGoatApi(userInput)
-//   }
+$("#clear-button").on('click', function (event) {
+    console.log(event, "clear event")
+     localStorage.removeItem("history");
+   $(".previous-search-button").remove()
+
+})
+
+$("body").on("click", ".previous-search-button", function(){
+    const userInput = $(this).html()
+    searchGoatApi(userInput)
+  
+    
+    })
+
