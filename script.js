@@ -2,6 +2,7 @@ const history = JSON.parse(localStorage.getItem('history')) || [];
 
 const innerCarousel = $('#carousel-inner')
 
+
 function searchForLocation(location) {
     const locationIdSettings = {
         "async": true,
@@ -152,7 +153,7 @@ function searchGoatApi(location) {
                     $(".location-image").each(function(index){
                         $(this).attr("src" , locationImages[index].attributes.image.full)
                     })
-
+                    $('#carouselExampleControls').removeClass('d-none')
 
                     // city rating
                     if (goatRating === 0) {
@@ -196,6 +197,7 @@ function searchGoatApi(location) {
 }
 function renderHotelResponse(hotels) {
     let hotelCont = document.querySelector("#hotel-container")
+    $("#hotel-container").removeClass("d-none")
     console.log ("RENDER HOTELS:",hotels)
   
 
@@ -225,8 +227,8 @@ function renderHotelResponse(hotels) {
     
 }
 
-
 function carosuelLogic(responseData) {
+
     for (var item of responseData) {
         if (item.type === 'photo') {
             var imagePath = item.attributes.image.full
@@ -242,7 +244,8 @@ function carosuelLogic(responseData) {
             document.querySelector('.carousel-inner').append(newDiv)
         }
     }
-    document.querySelector('#carouselExample').classList.remove('d-none')
+
+    
 }
 $('.form-inline').on('submit', function (event) {
     event.preventDefault();
