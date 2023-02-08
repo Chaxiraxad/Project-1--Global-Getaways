@@ -1,5 +1,6 @@
 .jumbotron {
-    background-color: rgb(202, 186, 202);
+    padding-bottom: 0%;
+    background-color: #9C7E6D;
     text-align: center;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
@@ -11,15 +12,13 @@
     max-width: 600px;
 }
 
-.header {
-    display: block;
-}
-
 body {
-    background-color:  rgb(202, 186, 202);
+    background-color: #9C7E6D;
 }
 .search-button {
-    background-color: rgb(230, 226, 221);
+    background-color: white;
+    border-color: #9C7E6D;
+
    
 }
 /* .navbar {
@@ -33,7 +32,7 @@ body {
 
 #search-container {
     width: 100%;
-    height: 400px;
+    height: 600px;
     background-image: url(./gabi-repaska-9OGBjr3fo7E-unsplash.jpg);
     background-size: cover;
     background-position: 50% 25%;
@@ -61,15 +60,14 @@ body {
     display: none;
 } */
 
-#carouselExampleFade {
-    width: 80%;
-    height: 300px;
+#carouselExampleControls {
+    width: 100%;
+    height: 500px;
 }
 
-.carousel-image {
-    /* height: 60vh;  */
-    height: 300px;
-
+.location-image {
+    height:500px;
+    object-fit: cover;
 }
 
 #hotel-container {
@@ -118,4 +116,22 @@ margin-top: 60px;
     font-size: x-large;
     font-weight: bold;
     
+}
+
+.previous-button {
+    width: min-content;
+    background-color: aliceblue;
+}
+
+.next-button {
+    width: min-content;
+    background-color: aliceblue;
+}
+
+.previous-icon {
+color: red;
+}
+
+.next-icon {
+
 }
