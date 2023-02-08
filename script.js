@@ -272,6 +272,7 @@ console.log(history);
 //removes city search
 document.getElementById("clear-button").onclick = function() {myFunction()};
 function myFunction() {
+    event.preventDefault();
   document.getElementById("clear-button").innerHTML = localStorage.clear(history);
   $("#clear-button").addClass("d-none")
   $(".btn-info").addClass("d-none")
