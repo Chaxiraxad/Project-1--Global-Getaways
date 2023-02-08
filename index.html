@@ -21,7 +21,7 @@
       <p class="lead">The journey of a thousand miles begins with a single step</p>
     </div>
   </div>
-
+<!-- create search-container -->
   <div id="search-container">
     <nav class="navbar" id="search-bar">
       <form class="form-inline">
@@ -30,33 +30,12 @@
       </form>
     </nav>
   </div>
-
-
-  <!-- <-- list of past searched cities --> 
-  
+  <!-- <-- list of past searched cities -->
   <div class="previous-search-container d-none">
-   
     <button type="button" id="clear-button" class="btn btn-outline-dark ">Clear</button>
-    
     <!-- <button type="button"  class="btn btn-info"></button> -->
-  
   </div>
-
-  <!-- <div id="carouselExample" class="carousel slide" data-ride="carousel">
-
-    <div class="carousel-inner">
-    </div>
-
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div> -->
-
+  <!-- Carousel section -->
   <div id="carouselExampleControls" class="carousel slide d-none " data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -69,41 +48,35 @@
         <img src="" class="d-block w-100 location-image" alt="...">
       </div>
     </div>
-   <button class="carousel-control-prev previous-button" type="button" data-target="#carouselExampleControls" data-slide="prev">
+    <button class="carousel-control-prev previous-button" type="button" data-target="#carouselExampleControls"
+      data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
     </button>
-    <button class="carousel-control-next next-button" type="button" data-target="#carouselExampleControls" data-slide="next">
+    <button class="carousel-control-next next-button" type="button" data-target="#carouselExampleControls"
+      data-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </button>
   </div>
-
+<!-- Goat API -->
   <div class="goat-container">
     <p class="city-name"></p>
     <p class="city-rate"></p>
     <p class="city-budget"></p>
     <p class="city-budgettext"></p>
-    <a class="city-tour d-none" id="tour-guide" target='_blank'><button type="button">Click to find a tour guide!</button></a>
+    <a class="city-tour d-none" id="tour-guide" target='_blank'><button type="button">Click to find a tour
+        guide!</button></a>
   </div>
-
+<!-- Booking.com API -->
   <div id="hotel-container" class="d-none">
     <div class="card hotel-card ">
       <img src="" class="card-img-top hotel-image" alt="...">
       <div class="card-body">
         <h5 class="card-title">Card title</h5>
         <h6 class="hotel-review">Card title</h6>
-        
-        <a href="#" class="btn btn-primary hotel-button"target="_blank">Go somewhere</a>
-      </div>
-    </div>
-    <div class="card hotel-card">
-      <img src="" class="card-img-top hotel-image" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <h6 class="hotel-review">Card title</h6>
-        
-        <a href="#" class="btn btn-primary hotel-button"target="_blank">Go somewhere</a>
+
+        <a href="#" class="btn btn-primary hotel-button" target="_blank">Go somewhere</a>
       </div>
     </div>
     <div class="card hotel-card">
@@ -112,13 +85,21 @@
         <h5 class="card-title">Card title</h5>
         <h6 class="hotel-review">Card title</h6>
 
-
-        <a href="#" class="btn btn-primary hotel-button"target="_blank">Go somewhere</a>
+        <a href="#" class="btn btn-primary hotel-button" target="_blank">Go somewhere</a>
       </div>
     </div>
+    <div class="card hotel-card">
+      <img src="" class="card-img-top hotel-image" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <h6 class="hotel-review">Card title</h6>
 
+
+        <a href="#" class="btn btn-primary hotel-button" target="_blank">Go somewhere</a>
+      </div>
+    </div>
   </div>
-
+<!-- Script -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
