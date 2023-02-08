@@ -28,12 +28,12 @@ The app should:
 -Have a quality README (including a unique name, description, technologies used, screenshot, and link to the deployed application).
 
 ## Installation
- git repository (add https)
+ git repository (https://github.com/D3Turquoise/travel-experience)
 
 ## Deployment
-[Project Link] (add https)
+[Project Link] (https://d3turquoise.github.io/travel-experience/)
 
-(ScreenShot) ![Getaway deployed website](./image here)
+(ScreenShot) ![Getaway deployed website](./website-screenshot.png)
 
 ## Usage
 N/A
