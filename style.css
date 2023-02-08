@@ -78,7 +78,25 @@ body {
     width:99vw;
     justify-content: space-around;
 }
-
-.hotel-card{
+.hotel-card {
     width:30%;
+    margin-bottom: 300px;
+}
+.card-body{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.hotel-image{
+height: 300px;
+object-fit: cover;
+
+
+}
+
+.hotel-button{
+margin-top: 60px;
 }

@@ -202,26 +202,29 @@ function renderHotelResponse(hotels) {
     $(".hotel-card").each(function(index){
         console.log("card-images", $(this))
         $(this).children(".hotel-image").attr("src", hotels[index].max_photo_url)
-
+        $(this).children(".card-body").children(".card-title").text(hotels[index].hotel_name)
+        $(this).children(".card-body").children(".hotel-review").text(`Review Score: ${hotels[index].review_score} - "${hotels[index].review_score_word}"`)
+        $(this).children(".card-body").children(".hotel-button").attr("href",hotels[index].url)
+        
     })
-    
-    
-    for (i = 0; i <= 2; i++) {
-        console.log (hotels[i].hotel_name)
-        let hotelCardEl = document.createElement("div") 
-        let hotelNameEl = document.createElement("h3")
-        hotelNameEl.textContent = hotels[i].hotel_name
-        let hotelImageEl = document.createElement("img") 
-        hotelImageEl.setAttribute("src", hotels[i].max_photo_url)
-        hotelCardEl.append(hotelNameEl)
-        hotelCardEl.append(hotelImageEl)
-        hotelCont.appendChild(hotelCardEl)
+    $("#hotel-container").removeClass("d-none")
+  
+    // for (i = 0; i <= 2; i++) {
+    //     console.log (hotels[i].hotel_name)
+    //     let hotelCardEl = document.createElement("div") 
+    //     let hotelNameEl = document.createElement("h3")
+    //     hotelNameEl.textContent = hotels[i].hotel_name
+    //     let hotelImageEl = document.createElement("img") 
+    //     hotelImageEl.setAttribute("src", hotels[i].max_photo_url)
+    //     hotelCardEl.append(hotelNameEl)
+    //     hotelCardEl.append(hotelImageEl)
+    //     hotelCont.appendChild(hotelCardEl)
 
 
 
 
 
-    }
+    // }
     
 }
 
