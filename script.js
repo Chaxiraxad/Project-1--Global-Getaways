@@ -13,7 +13,7 @@ history.forEach((item) => {
         "url": `https://booking-com.p.rapidapi.com/v1/hotels/locations?locale=en-gb&name=${location}`,
         "method": "GET",
         "headers": {
-            "X-RapidAPI-Key": "7f8d90c41emsh83bb1582f24d1f5p1217cbjsna7b88f62114b",
+            "X-RapidAPI-Key": "574ca1516cmsh0d07b82923411dap1de1cdjsn0887d34a2209",
             "X-RapidAPI-Host": "booking-com.p.rapidapi.com"
         }
     };
@@ -35,7 +35,7 @@ history.forEach((item) => {
             "url": `https://booking-com.p.rapidapi.com/v1/hotels/search?dest_id=${destinationId}&order_by=popularity&filter_by_currency=GBP&adults_number=2&room_number=1&checkout_date=2023-07-16&units=metric&checkin_date=2023-07-15&dest_type=city&locale=en-gb&children_ages=5%2C0&categories_filter_ids=class%3A%3A2%2Cclass%3A%3A4%2Cfree_cancellation%3A%3A1&page_number=0&include_adjacency=true&children_number=2`,
             "method": "GET",
             "headers": {
-                "X-RapidAPI-Key": "7f8d90c41emsh83bb1582f24d1f5p1217cbjsna7b88f62114b",
+                "X-RapidAPI-Key": "574ca1516cmsh0d07b82923411dap1de1cdjsn0887d34a2209",
                 "X-RapidAPI-Host": "booking-com.p.rapidapi.com"
             }
         };
